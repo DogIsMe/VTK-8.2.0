@@ -1,0 +1,52 @@
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.1">
+  <Domain>
+    <Grid Name="INT64 Polyvertex" GridType="Uniform">
+      <Topology TopologyType="Polyvertex" Dimensions="3"/>
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="9" NumberType="Int" Precision="8" Format="XML">
+9223372036854775807 9223372036854775807 9223372036854775807 -9223372036854775808 -9223372036854775808 -9223372036854775808 0 0 0 
+</DataItem>
+      </Geometry>
+      <Attribute Name="Scalar UINT8" AttributeType="Scalar" Center="Node">
+        <DataItem Dimensions="3" NumberType="UChar" Precision="1" Format="XML">
+255 0 50 
+</DataItem>
+      </Attribute>
+      <Attribute Name="Vector UINT16" AttributeType="Vector" Center="Node">
+        <DataItem Dimensions="3 3" NumberType="UShort" Precision="2" Format="XML">
+65535 65535 65535 0 0 0 100 100 100 
+</DataItem>
+      </Attribute>
+      <Attribute Name="Tensor UINT32" AttributeType="Tensor" Center="Node">
+        <DataItem Dimensions="3 3 3" NumberType="UInt" Precision="4" Format="XML">
+4294967295 4294967295 0 50 100 200 500 1000 1000 1000 
+1000 500 200 100 50 0 4294967295 4294967295 4294967295 4294967295 
+0 50 100 200 500 1000 1000 
+</DataItem>
+      </Attribute>
+      <Attribute Name="Scalar INT8" AttributeType="Scalar" Center="Grid">
+        <DataItem Dimensions="1" NumberType="Char" Precision="1" Format="XML">
+127 
+</DataItem>
+      </Attribute>
+    </Grid>
+    <Grid Name="FLOAT64 Quadrilateral" GridType="Uniform">
+      <Topology TopologyType="Quadrilateral" Dimensions="1">
+        <DataItem Dimensions="4" NumberType="Int" Precision="4" Format="XML">
+0 1 2 3 
+</DataItem>
+      </Topology>
+      <Geometry GeometryType="XY">
+        <DataItem Dimensions="8" NumberType="Float" Precision="8" Format="XML">
+-1000.5 0 0 -500.25 1000.5 0 0 2196.99 
+</DataItem>
+      </Geometry>
+      <Attribute Name="Vector INT16" AttributeType="Vector" Center="Grid">
+        <DataItem Dimensions="3" NumberType="Short" Precision="2" Format="XML">
+32767 -32768 0 
+</DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

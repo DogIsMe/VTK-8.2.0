@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<VTKFile type="vtkMultiBlockDataSet" version="1.0" byte_order="LittleEndian" header_type="UInt32" compressor="vtkZLibDataCompressor">
+  <vtkMultiBlockDataSet>
+    <Piece index="0">
+      <DataSet index="0" file="3DMatrix/3DMatrix_0_0.vti"/>
+      <DataSet index="1" file="3DMatrix/3DMatrix_1_1.vti"/>
+      <DataSet index="2" file="3DMatrix/3DMatrix_2_2.vti"/>
+      <DataSet index="3" file="3DMatrix/3DMatrix_3_3.vti"/>
+      <DataSet index="4" file="3DMatrix/3DMatrix_4_4.vti"/>
+      <DataSet index="5" file="3DMatrix/3DMatrix_5_5.vti"/>
+      <DataSet index="6" file="3DMatrix/3DMatrix_6_6.vti"/>
+      <DataSet index="7" file="3DMatrix/3DMatrix_7_7.vti"/>
+    </Piece>
+  </vtkMultiBlockDataSet>
+</VTKFile>

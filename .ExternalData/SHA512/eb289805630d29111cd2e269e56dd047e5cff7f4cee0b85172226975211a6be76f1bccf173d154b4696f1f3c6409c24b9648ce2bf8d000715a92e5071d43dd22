@@ -1,0 +1,26 @@
+<Xdmf xmlns:xi="http://www.w3.org/2003/XInclude" Version="2.1">
+  <Domain>
+    <Grid Name="PolygonOctagon" GridType="Uniform">
+      <Topology TopologyType="Polygon" Dimensions="2" NodesPerElement="8">
+        <DataItem Dimensions="16" NumberType="Float" Precision="8" Format="XML">
+0 1 2 3 4 5 6 7 8 9 10 11 1 0 12 13 
+</DataItem>
+      </Topology>
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="42" NumberType="Float" Precision="8" Format="XML">
+-1 0 0 1 0 0 2 1 0 2 2 0 1 3 0 -1 3 0 -2 2 0 -2 1 0 -1 -3 0 1 -3 0 2 -2 0 2 -1 0 -2 -1 0 -2 -2 0
+</DataItem>
+      </Geometry>
+      <Attribute Name="NodeScalar" AttributeType="Scalar" Center="Node">
+        <DataItem Dimensions="14" NumberType="Float" Precision="8" Format="XML">
+500 500 100 100 100 100 100 100 100 100 100 100 100 100
+</DataItem>
+      </Attribute>
+      <Attribute Name="CellScalar" AttributeType="Scalar" Center="Cell">
+        <DataItem Dimensions="2" NumberType="Float" Precision="8" Format="XML">
+100 1000
+</DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

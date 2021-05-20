@@ -1,0 +1,59 @@
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.1">
+  <Domain>
+    <Grid Name="Tetrahedron 1" GridType="Uniform">
+      <Topology TopologyType="Tetrahedron" Dimensions="1">
+        <DataItem Dimensions="4" NumberType="Int" Precision="4" Format="XML">
+0 1 2 3
+</DataItem>
+      </Topology>
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="12" NumberType="Float" Precision="8" Format="XML">
+-1 0 0 1 0 0 0 1 0 0 0 1
+</DataItem>
+      </Geometry>
+      <Attribute Name="NodeScalar" AttributeType="Scalar" Center="Node">
+        <DataItem Dimensions="4" NumberType="Float" Precision="8" Format="XML">
+0 0 0 100
+</DataItem>
+      </Attribute>
+      <Attribute Name="CellScalar" AttributeType="Scalar" Center="Cell">
+        <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+100
+</DataItem>
+      </Attribute>
+      <Attribute Name="CellVector" AttributeType="Vector" Center="Cell">
+        <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+-100 -100 -100
+</DataItem>
+      </Attribute>
+      </Grid>
+      <Grid Name="Tetrahedron 2" GridType="Uniform">
+      <Topology TopologyType="Tetrahedron" Dimensions="1">
+        <DataItem Dimensions="4" NumberType="Int" Precision="4" Format="XML">
+0 1 2 3
+</DataItem>
+      </Topology>
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="12" NumberType="Float" Precision="8" Format="XML">
+-1 0 0 1 0 0 0 1 0 0 0 -1
+</DataItem>
+      </Geometry>
+      <Attribute Name="NodeScalar" AttributeType="Scalar" Center="Node">
+        <DataItem Dimensions="4" NumberType="Float" Precision="8" Format="XML">
+0 0 0 100
+</DataItem>
+      </Attribute>
+      <Attribute Name="CellScalar" AttributeType="Scalar" Center="Cell">
+        <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+200
+</DataItem>
+      </Attribute>
+      <Attribute Name="CellVector" AttributeType="Vector" Center="Cell">
+        <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+100 100 100
+</DataItem>
+      </Attribute>
+      </Grid>
+  </Domain>
+</Xdmf>

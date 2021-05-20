@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf xmlns:xi="http://www.w3.org/2003/XInclude" Version="2.2">
+  <Domain>
+    <Grid Name="temporalStaticMeshes" GridType="Collection" CollectionType="Temporal">
+      <Grid GridType="Tree">
+        <Topology TopologyType="NOTOPOLOGY" Dimensions="1"/>
+        <Geometry GeometryType="NONE"/>
+        <Time TimeType="Single" Value="0"/>
+        <Grid Name="Wavelet" GridType="Uniform">
+          <Topology TopologyType="Hexahedron" Dimensions="8000">
+            <DataItem Dimensions="8000 8" NumberType="Int" Precision="8" Format="HDF">temporalStaticMeshes.h5:/Topology_Block_0</DataItem>
+          </Topology>
+          <Geometry GeometryType="XYZ">
+            <DataItem Dimensions="9261 3" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Geometry_Block_0/Points</DataItem>
+          </Geometry>
+          <Attribute Name="RTData" Active="1" AttributeType="Scalar" Center="Node">
+            <DataItem Dimensions="9261" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Block_0_t000000/Node/RTData</DataItem>
+          </Attribute>
+        </Grid>
+        <Grid Name="Sphere" GridType="Uniform">
+          <Topology TopologyType="Triangle" Dimensions="4800">
+            <DataItem Dimensions="4800 3" NumberType="Int" Precision="8" Format="HDF">temporalStaticMeshes.h5:/Topology_Block_1</DataItem>
+          </Topology>
+          <Geometry GeometryType="XYZ">
+            <DataItem Dimensions="2402 3" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Geometry_Block_1/Points</DataItem>
+          </Geometry>
+          <Attribute Name="Normals" Active="1" AttributeType="Vector" Center="Node">
+            <DataItem Dimensions="2402 3" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Block_1_t000000/Node/Normals</DataItem>
+          </Attribute>
+        </Grid>
+      </Grid>
+      <Grid GridType="Tree">
+        <Topology TopologyType="NOTOPOLOGY" Dimensions="1"/>
+        <Geometry GeometryType="NONE"/>
+        <Time TimeType="Single" Value="1"/>
+        <Grid Name="Wavelet" GridType="Uniform">
+          <Topology TopologyType="Hexahedron" Dimensions="8000">
+            <DataItem Dimensions="8000 8" NumberType="Int" Precision="8" Format="HDF">temporalStaticMeshes.h5:/Topology_Block_0</DataItem>
+          </Topology>
+          <Geometry GeometryType="XYZ">
+            <DataItem Dimensions="9261 3" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Geometry_Block_0/Points</DataItem>
+          </Geometry>
+          <Attribute Name="RTData" Active="1" AttributeType="Scalar" Center="Node">
+            <DataItem Dimensions="9261" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Block_0_t000001/Node/RTData</DataItem>
+          </Attribute>
+        </Grid>
+        <Grid Name="Sphere" GridType="Uniform">
+          <Topology TopologyType="Triangle" Dimensions="4800">
+            <DataItem Dimensions="4800 3" NumberType="Int" Precision="8" Format="HDF">temporalStaticMeshes.h5:/Topology_Block_1</DataItem>
+          </Topology>
+          <Geometry GeometryType="XYZ">
+            <DataItem Dimensions="2402 3" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Geometry_Block_1/Points</DataItem>
+          </Geometry>
+          <Attribute Name="Normals" Active="1" AttributeType="Vector" Center="Node">
+            <DataItem Dimensions="2402 3" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Block_1_t000001/Node/Normals</DataItem>
+          </Attribute>
+        </Grid>
+      </Grid>
+      <Grid GridType="Tree">
+        <Topology TopologyType="NOTOPOLOGY" Dimensions="1"/>
+        <Geometry GeometryType="NONE"/>
+        <Time TimeType="Single" Value="2"/>
+        <Grid Name="Wavelet" GridType="Uniform">
+          <Topology TopologyType="Hexahedron" Dimensions="8000">
+            <DataItem Dimensions="8000 8" NumberType="Int" Precision="8" Format="HDF">temporalStaticMeshes.h5:/Topology_Block_0</DataItem>
+          </Topology>
+          <Geometry GeometryType="XYZ">
+            <DataItem Dimensions="9261 3" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Geometry_Block_0/Points</DataItem>
+          </Geometry>
+          <Attribute Name="RTData" Active="1" AttributeType="Scalar" Center="Node">
+            <DataItem Dimensions="9261" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Block_0_t000002/Node/RTData</DataItem>
+          </Attribute>
+        </Grid>
+        <Grid Name="Sphere" GridType="Uniform">
+          <Topology TopologyType="Triangle" Dimensions="4800">
+            <DataItem Dimensions="4800 3" NumberType="Int" Precision="8" Format="HDF">temporalStaticMeshes.h5:/Topology_Block_1</DataItem>
+          </Topology>
+          <Geometry GeometryType="XYZ">
+            <DataItem Dimensions="2402 3" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Geometry_Block_1/Points</DataItem>
+          </Geometry>
+          <Attribute Name="Normals" Active="1" AttributeType="Vector" Center="Node">
+            <DataItem Dimensions="2402 3" NumberType="Float" Precision="4" Format="HDF">temporalStaticMeshes.h5:/Block_1_t000002/Node/Normals</DataItem>
+          </Attribute>
+        </Grid>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

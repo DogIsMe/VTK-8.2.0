@@ -1,0 +1,260 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.1">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal">
+      <Grid Name="TimeStep000000" GridType="Uniform">
+        <Time TimeType="Single" Value="10"/>
+        <Topology TopologyType="Polyvertex" Dimensions="500"/>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="1500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000000/XYZ</DataItem>
+        </Geometry>
+        <Attribute Name="LastValidTimeStep" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Int" Precision="4" Format="XML">
+0 
+</DataItem>
+        </Attribute>
+        <Attribute Name="Widths" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+28.8595 28.8595 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="ReciprocalAngles" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+1.5708 1.5708 1.5708 
+</DataItem>
+        </Attribute>
+        <Attribute Name="InteraxialAngles" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+1.5708 1.5708 1.5708 
+</DataItem>
+        </Attribute>
+        <Attribute Name="SimSize" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+28.8595 28.8595 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="ReciprocalLengths" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+0.0346506 0.0346506 0.0346506 
+</DataItem>
+        </Attribute>
+        <Attribute Name="ReciprocalVectors" AttributeType="Matrix" Center="Grid">
+          <DataItem Dimensions="9" NumberType="Float" Precision="8" Format="XML">
+0.0346506 0 0 0 0.0346506 0 0 0 0.0346506 
+</DataItem>
+        </Attribute>
+        <Attribute Name="LatticeLengths" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+28.8595 28.8595 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="UnitVectors" AttributeType="Matrix" Center="Grid">
+          <DataItem Dimensions="9" NumberType="Float" Precision="8" Format="XML">
+28.8595 0 0 0 28.8595 0 0 0 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="LatticeVectors" AttributeType="Matrix" Center="Grid">
+          <DataItem Dimensions="9" NumberType="Float" Precision="8" Format="XML">
+28.8595 0 0 0 28.8595 0 0 0 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="Origin" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+-14.4298 -14.4298 -14.4298 
+</DataItem>
+        </Attribute>
+        <Attribute Name="NumberOfAtomTypes" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Int" Precision="4" Format="XML">
+1 
+</DataItem>
+        </Attribute>
+        <Attribute Name="NumberOfAtoms" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Int" Precision="4" Format="XML">
+500 
+</DataItem>
+        </Attribute>
+        <Attribute Name="TotalEnergy" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+-0.048231 
+</DataItem>
+        </Attribute>
+        <Attribute Name="KineticEnergy" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+6.23188 
+</DataItem>
+        </Attribute>
+        <Attribute Name="PotentialEnergy" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+-30.3474 
+</DataItem>
+        </Attribute>
+        <Attribute Name="TotalMass" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+19974 
+</DataItem>
+        </Attribute>
+        <Attribute Name="Density" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+0.0208019 
+</DataItem>
+        </Attribute>
+        <Attribute Name="Volume" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+24036.3 
+</DataItem>
+        </Attribute>
+        <Attribute Name="AtomIndex" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="500" NumberType="Int" Precision="4" Format="HDF">output.h5:/TimeStep000000/AtomIndex</DataItem>
+        </Attribute>
+        <Attribute Name="AtomType" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="500" NumberType="Int" Precision="4" Format="HDF">output.h5:/TimeStep000000/AtomType</DataItem>
+        </Attribute>
+        <Attribute Name="HalfStepVelcity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="1500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000000/HalfStepVelcity</DataItem>
+        </Attribute>
+        <Attribute Name="AtomStressPE_up" AttributeType="Tensor6" Center="Node">
+          <DataItem Dimensions="3000" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000000/AtomStressPE_up</DataItem>
+        </Attribute>
+        <Attribute Name="Force" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="1500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000000/Force</DataItem>
+        </Attribute>
+        <Attribute Name="Charge" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000000/Charge</DataItem>
+        </Attribute>
+        <Attribute Name="Mass" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000000/Mass</DataItem>
+        </Attribute>
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="1500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000000/Velocity</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="TimeStep000001" GridType="Uniform">
+        <Time TimeType="Single" Value="20"/>
+        <Topology TopologyType="Polyvertex" Dimensions="500"/>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="1500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000001/XYZ</DataItem>
+        </Geometry>
+        <Attribute Name="LastValidTimeStep" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Int" Precision="4" Format="XML">
+1 
+</DataItem>
+        </Attribute>
+        <Attribute Name="Widths" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+28.8595 28.8595 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="ReciprocalAngles" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+1.5708 1.5708 1.5708 
+</DataItem>
+        </Attribute>
+        <Attribute Name="InteraxialAngles" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+1.5708 1.5708 1.5708 
+</DataItem>
+        </Attribute>
+        <Attribute Name="SimSize" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+28.8595 28.8595 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="ReciprocalLengths" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+0.0346506 0.0346506 0.0346506 
+</DataItem>
+        </Attribute>
+        <Attribute Name="ReciprocalVectors" AttributeType="Matrix" Center="Grid">
+          <DataItem Dimensions="9" NumberType="Float" Precision="8" Format="XML">
+0.0346506 0 0 0 0.0346506 0 0 0 0.0346506 
+</DataItem>
+        </Attribute>
+        <Attribute Name="LatticeLengths" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+28.8595 28.8595 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="UnitVectors" AttributeType="Matrix" Center="Grid">
+          <DataItem Dimensions="9" NumberType="Float" Precision="8" Format="XML">
+28.8595 0 0 0 28.8595 0 0 0 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="LatticeVectors" AttributeType="Matrix" Center="Grid">
+          <DataItem Dimensions="9" NumberType="Float" Precision="8" Format="XML">
+28.8595 0 0 0 28.8595 0 0 0 28.8595 
+</DataItem>
+        </Attribute>
+        <Attribute Name="Origin" AttributeType="Vector" Center="Grid">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+-14.4298 -14.4298 -14.4298 
+</DataItem>
+        </Attribute>
+        <Attribute Name="NumberOfAtomTypes" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Int" Precision="4" Format="XML">
+1 
+</DataItem>
+        </Attribute>
+        <Attribute Name="NumberOfAtoms" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Int" Precision="4" Format="XML">
+500 
+</DataItem>
+        </Attribute>
+        <Attribute Name="TotalEnergy" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+-0.0482245 
+</DataItem>
+        </Attribute>
+        <Attribute Name="KineticEnergy" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+6.03962 
+</DataItem>
+        </Attribute>
+        <Attribute Name="PotentialEnergy" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+-30.1518 
+</DataItem>
+        </Attribute>
+        <Attribute Name="TotalMass" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+19974 
+</DataItem>
+        </Attribute>
+        <Attribute Name="Density" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+0.0208019 
+</DataItem>
+        </Attribute>
+        <Attribute Name="Volume" AttributeType="Scalar" Center="Grid">
+          <DataItem Dimensions="1" NumberType="Float" Precision="8" Format="XML">
+2800 
+</DataItem>
+        </Attribute>
+        <Attribute Name="AtomIndex" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="500" NumberType="Int" Precision="4" Format="HDF">output.h5:/TimeStep000001/AtomIndex</DataItem>
+        </Attribute>
+        <Attribute Name="AtomType" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="500" NumberType="Int" Precision="4" Format="HDF">output.h5:/TimeStep000001/AtomType</DataItem>
+        </Attribute>
+        <Attribute Name="HalfStepVelcity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="1500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000001/HalfStepVelcity</DataItem>
+        </Attribute>
+        <Attribute Name="AtomStressPE_up" AttributeType="Tensor6" Center="Node">
+          <DataItem Dimensions="3000" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000001/AtomStressPE_up</DataItem>
+        </Attribute>
+        <Attribute Name="Force" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="1500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000001/Force</DataItem>
+        </Attribute>
+        <Attribute Name="Charge" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000001/Charge</DataItem>
+        </Attribute>
+        <Attribute Name="Mass" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000001/Mass</DataItem>
+        </Attribute>
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="1500" NumberType="Float" Precision="8" Format="HDF">output.h5:/TimeStep000001/Velocity</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

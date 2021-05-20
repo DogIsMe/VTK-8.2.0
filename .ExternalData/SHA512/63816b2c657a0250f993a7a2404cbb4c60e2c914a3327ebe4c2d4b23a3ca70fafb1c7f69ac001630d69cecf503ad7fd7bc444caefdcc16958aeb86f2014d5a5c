@@ -1,0 +1,44 @@
+<Xdmf xmlns:xi="http://www.w3.org/2003/XInclude" Version="2.1">
+  <Domain>
+    <Grid Name="2DSMesh" GridType="Uniform">
+      <Topology TopologyType="2DSMesh" Dimensions="2 3"/>
+      <Geometry Type="XYZ">
+        <DataItem Format="XML" Dimensions="2 3 3">
+0 0 0
+1 0 0
+4 0 0
+
+0 1 0
+1 1 0
+4 1 0
+       </DataItem>
+     </Geometry>
+     <Attribute Name="NodeScalar" AttributeType="Scalar" Center="Node">
+        <DataItem Format="XML" Dimensions="2 3">
+100 200 300 400
+500 600
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellScalar" AttributeType="Scalar" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 2">
+100 200
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellVector2Components" AttributeType="Vector" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 2 2">
+100 100 200 200
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellVector3Components" AttributeType="Vector" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 2 3">
+100 100 100 200 200 200
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellVector4Components" AttributeType="Vector" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 2 4">
+100 100 100 100 200 200 200 200
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" [
+<!ENTITY HeavyData "set.h5">
+]>
+
+<Xdmf>
+  <Domain>
+    <Grid Name="Unnamed">
+      <Topology  Type="TETRAHEDRON" Dimensions="18">
+        <DataItem DataType="Int" Precision="4" Dimensions="18 4" Format="HDF">set.h5:/Unnamed/Connections</DataItem>
+      </Topology>
+      <Geometry Type="XYZ">
+        <DataItem DataType="Float" Precision="4" Dimensions="16 3" Format="HDF">set.h5:/Unnamed/XYZ</DataItem>
+      </Geometry>
+      <Attribute Center="Node" AttributeType="Scalar" Name="DataOne">
+        <DataItem DataType="Float" Precision="8" Dimensions="16" Format="XML">
+          600 700 800 900 1000 1100 1200 1300 1400 6000 6100 6200 6300 6400 6500 6600
+        </DataItem>
+      </Attribute>
+      <Attribute Center="Node" AttributeType="Scalar" Name="DataTwo">
+        <DataItem DataType="Float" Precision="8" Dimensions="16" Format="XML">
+          100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600
+        </DataItem>
+      </Attribute>
+      <Set SetType="Node" Name="nodeSet">
+        <DataItem NumberType="Int" Precision="4" Dimensions="4" Format="XML">
+            0 3 4 7
+        </DataItem>
+        <Attribute Name="Node Centered Set Values" Center="Node" AttributeType="Scalar">
+          <DataItem Format="XML" Dimensions="4" NumberType="Int" Precision="4">
+            0 300 400 700
+          </DataItem>
+        </Attribute>
+        <Attribute Name="More Node Set Values" Center="Node" AttributeType="Scalar">
+          <DataItem Format="XML" Dimensions="4" NumberType="Int" Precision="4">
+            99 98 97 96
+          </DataItem>
+        </Attribute>
+      </Set>
+      <Set SetType="Cell" Name="cellSet">
+        <DataItem NumberType="Int" Precision="4" Dimensions="1" Format="XML">
+          2
+        </DataItem>
+        <Attribute Name="Cell Centered Set Values" Center="Cell" AttributeType="Scalar">
+          <DataItem Format="XML" Dimensions="1" NumberType="Int" Precision="4">
+            22
+          </DataItem>
+        </Attribute>
+      </Set>
+      <Set SetType="Face" Name="face">
+        <DataItem NumberType="Int" Precision="4" Dimensions="1 2" Format="XML">
+          2 1
+        </DataItem>
+        <Attribute Name="Face Centered Set Values" Center="Cell" AttributeType="Scalar">
+          <DataItem Format="XML" Dimensions="1" NumberType="Int" Precision="4">
+            22
+          </DataItem>
+        </Attribute>
+      </Set>
+      <Set SetType="Edge" Name="edge">
+        <DataItem NumberType="Int" Precision="4" Dimensions="1 3" Format="XML">
+          2 1 0
+        </DataItem>
+        <Attribute Name="Edge Centered Set Values" Center="Cell" AttributeType="Scalar">
+          <DataItem Format="XML" Dimensions="1" NumberType="Int" Precision="4">
+            22
+          </DataItem>
+        </Attribute>
+      </Set>
+    </Grid>
+  </Domain>
+</Xdmf>

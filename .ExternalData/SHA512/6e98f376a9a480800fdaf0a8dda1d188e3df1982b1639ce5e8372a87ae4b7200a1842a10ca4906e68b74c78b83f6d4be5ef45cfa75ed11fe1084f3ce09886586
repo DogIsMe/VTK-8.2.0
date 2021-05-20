@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.0" xmlns:xi="http://www.w3.org/2001/XInclude" >  <Domain
+Name="test axes">
+  <Grid Name="gridZYX" Type="Uniform">
+    <Topology Type="3DCORECTMESH" Dimensions="16   8   4">  </Topology>
+      <Geometry Type="ORIGIN_DXDYDZ">
+       <DataItem DataType="Float" Dimensions="3" Format="XML">
+        0   0   0
+       </DataItem>
+       <DataItem DataType="Float" Dimensions="3" Format="XML">
+        1.0 1.0 1.0
+       </DataItem>
+      </Geometry>
+  </Grid>
+ </Domain>
+</Xdmf>

@@ -1,0 +1,30 @@
+<Xdmf xmlns:xi="http://www.w3.org/2003/XInclude" Version="2.1">
+  <Domain>
+    <Grid Name="test" GridType="Uniform">
+      <Topology TopologyType="Hexahedron" Dimensions="2">
+        <DataItem Dimensions="16" NumberType="Int" Precision="4" Format="XML">
+0 1 7 6 3 4 10 9 1 2 
+8 7 4 5 11 10 
+</DataItem>
+      </Topology>
+      <Geometry GeometryType="X_Y">
+        <DataItem Dimensions="24" NumberType="Float" Precision="8" Format="XML">
+0 1 3 0 1 3 0 1 3 0
+1 3 0 0 0 1 1 2 0 0
+0 1 1 2
+</DataItem>
+      </Geometry>
+      <Attribute Name="NodeValues" AttributeType="Scalar" Center="Node">
+        <DataItem Dimensions="12" NumberType="Float" Precision="8" Format="XML">
+110 200 300 300 400 500 300 400 500 500 
+600 700 
+</DataItem>
+      </Attribute>
+      <Attribute Name="CellValues" AttributeType="Scalar" Center="Cell">
+        <DataItem Dimensions="2" NumberType="Float" Precision="8" Format="XML">
+100 200 
+</DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

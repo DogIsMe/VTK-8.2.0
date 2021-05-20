@@ -1,0 +1,15 @@
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.1">
+  <Domain>
+      <Grid Name="TimeStep000000" GridType="Uniform">
+        <Time TimeType="Single" Value="10"/>
+        <Topology TopologyType="Polyvertex" Dimensions="1"/>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">0 0 0</DataItem>
+        </Geometry>
+        <Attribute Name="AtomStressTensor" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="9" NumberType="Float" Precision="8" Format="XML">1 2 3 2 4 5 3 5 6</DataItem>
+        </Attribute>
+      </Grid>
+  </Domain>
+</Xdmf>

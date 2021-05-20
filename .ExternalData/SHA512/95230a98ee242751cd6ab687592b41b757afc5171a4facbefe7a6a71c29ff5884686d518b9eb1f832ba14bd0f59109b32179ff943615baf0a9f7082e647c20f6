@@ -1,0 +1,42 @@
+<Xdmf xmlns:xi="http://www.w3.org/2003/XInclude" Version="2.1">
+  <Domain>
+    <Grid Name="2DRectMesh" GridType="Uniform">
+      <Topology TopologyType="2DRectMesh" Dimensions="2 2"/>
+      <Geometry Type="VXVY">
+        <!-- VX -->
+        <DataItem Format="XML" Dimensions="2">
+0 1
+        </DataItem>
+        <!-- VY -->
+        <DataItem Format="XML" Dimensions="2">
+0 1
+        </DataItem>
+      </Geometry>
+      <Attribute Name="NodeScalars" AttributeType="Scalar" Center="Node">
+        <DataItem Format="XML" Dimensions="2 2" NumberType="UChar">
+1 2 3 4
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellScalars" AttributeType="Scalar" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 1">
+100
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellVectors2Components" AttributeType="Vector" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 1 2">
+100 100
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellVectors3Components" AttributeType="Vector" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 1 3">
+100 100 100
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellVectors4Components" AttributeType="Vector" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 1 4">
+100 100 100 100
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

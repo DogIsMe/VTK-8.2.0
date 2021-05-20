@@ -1,0 +1,28 @@
+<Xdmf xmlns:xi="http://www.w3.org/2003/XInclude" Version="2.1">
+  <Domain>
+    <Grid Name="2DCoRectMesh" GridType="Uniform">
+      <Topology TopologyType="2DCoRectMesh" Dimensions="2 2">
+      </Topology>
+      <Geometry Type="ORIGIN_DXDY">
+         <!-- Origin -->
+         <DataItem Format="XML" Dimensions="2">
+0.0 3.0
+         </DataItem>
+         <!-- DxDyDz -->
+        <DataItem Format="XML" Dimensions="2">
+1.0 1.5
+        </DataItem>
+      </Geometry>
+      <Attribute Name="NodeScalars" Center="Node">
+        <DataItem Format="XML" Dimensions="2 2">
+100 200 300 400
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellScalars" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 1">
+100
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

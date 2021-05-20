@@ -1,0 +1,61 @@
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.1">
+  <Domain>
+    <Grid Name="3DSMesh" GridType="Uniform">
+      <Topology TopologyType="3DSMesh" Dimensions="2 2 3"/>
+      <Geometry Type="XYZ">
+        <DataItem Format="XML" Dimensions="2 2 3 3" NumberType="Int">
+0 0 0
+1 0 0
+4 0 0
+
+0 0 2
+1 0 2
+4 0 2
+
+0 1 0
+1 1 0
+4 1 0
+
+0 1 2
+1 1 2
+4 1 2
+       </DataItem>
+      </Geometry>
+      <Attribute Name="NodeScalar" AttributeType="Scalar" Center="Node">
+        <DataItem Format="XML" Dimensions="2 2 3" NumberType="Int">
+100 200 300 400
+500 600 700 800
+900 1000 1100 1200
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellScalar" AttributeType="Scalar" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 1 2" NumberType="Int">
+100 200
+        </DataItem>
+      </Attribute>
+      <Attribute Name="NodeScalar2Components" AttributeType="Scalar" Center="Node">
+        <DataItem Format="XML" Dimensions="2 2 3 2"  NumberType="Int">
+100 100 200 200 300 300 400 400
+500 500 600 600 700 700 800 800
+900 900 1000 1000 1100 1100 1200 1200
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellVector2Components" AttributeType="Vector" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 1 2 2"  NumberType="Int">
+100 100 200 200
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellVector3Components" AttributeType="Vector" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 1 2 3"  NumberType="Int">
+100 100 100 200 200 200
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellVector4Components" AttributeType="Vector" Center="Cell">
+        <DataItem Format="XML" Dimensions="1 1 2 4"  NumberType="Int">
+100 100 100 100 200 200 200 200 
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

@@ -1,0 +1,17 @@
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.1">
+  <Domain>
+    <Grid Name="Polyline" GridType="Uniform">
+      <Topology TopologyType="Polyline" Dimensions="1" NodesPerElement="5">
+        <DataItem Dimensions="5" NumberType="Float" Precision="8" Format="XML">
+0 1 2 3 4
+</DataItem>
+      </Topology>
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="15" NumberType="Float" Precision="8" Format="XML">
+-2 0 0 -1 1 0 0 0 0 1 1 0 2 0 0 
+</DataItem>
+      </Geometry>
+    </Grid>
+  </Domain>
+</Xdmf>

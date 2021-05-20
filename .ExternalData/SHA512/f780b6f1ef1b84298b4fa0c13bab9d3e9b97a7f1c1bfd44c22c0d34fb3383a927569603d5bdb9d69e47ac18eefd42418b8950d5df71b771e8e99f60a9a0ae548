@@ -1,0 +1,44 @@
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.1">
+  <Domain>
+    <Grid Name="Mixed" GridType="Uniform">
+      <Topology TopologyType="Mixed" NumberOfElements="3" >
+        <DataItem Format="XML" NumberType="Int" Dimensions="20">
+6        0 1 2 7
+3   4   4 5 6 7
+9        8 9 10 11 12 13 14 15
+        </DataItem>
+      </Topology> 
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="48" NumberType="Float" Precision="8" Format="XML">
+0 -1 -1 -1 -1 0 1 -1 0 0 0 0 -1 1 0 0 2 0 1 1 0 0 0 0 9 9 -1 11 9 -1 11 11 -1 9 11 -1 9 9 1 11 9 1 11 11 1 9 11 1
+        </DataItem>
+      </Geometry>
+      <Attribute Name="NodeScalar" AttributeType="Scalar" Center="Node">
+        <DataItem Dimensions="16" NumberType="Float" Precision="8" Format="XML">
+100 100 100 100 500 500 500 300 1000 1000 1000 1000 1000 1000 1000 1000
+</DataItem>
+      </Attribute>
+      <Attribute Name="CellScalar" AttributeType="Scalar" Center="Cell">
+        <DataItem Dimensions="3" NumberType="Float" Precision="8" Format="XML">
+100 200 300
+</DataItem>
+      </Attribute>
+      <Attribute Name="NodeVector2Components" AttributeType="Vector" Center="Node">
+        <DataItem Dimensions="32" NumberType="Float" Precision="8" Format="XML">
+100 100 100 100 100 100 100 100 500 500 500 500 500 500 300 300 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000
+</DataItem>
+      </Attribute>
+      <Attribute Name="NodeVector3Components" AttributeType="Vector" Center="Node">
+        <DataItem Dimensions="48" NumberType="Float" Precision="8" Format="XML">
+100 100 100 100 100 100 100 100 100 100 100 100 500 500 500 500 500 500 500 500 500 300 300 300 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000
+</DataItem>
+      </Attribute>
+      <Attribute Name="NodeVector4Components" AttributeType="Vector" Center="Node">
+        <DataItem Dimensions="64" NumberType="Float" Precision="8" Format="XML">
+100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 500 500 500 500 500 500 500 500 500 500 500 500 300 300 300 300 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000
+</DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

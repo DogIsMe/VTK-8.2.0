@@ -1,0 +1,31 @@
+<Xdmf xmlns:xi="http://www.w3.org/2003/XInclude" Version="2.1">
+  <Domain>
+    <Grid Name="Tetrahedron" GridType="Uniform">
+      <Topology TopologyType="Tetrahedron" Dimensions="2">
+        <DataItem Dimensions="8" NumberType="Int" Precision="4" Format="XML">
+0 1 2 3 4 0 1 2 4
+</DataItem>
+      </Topology>
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="15" NumberType="Float" Precision="8" Format="XML">
+-1 0 0 1 0 0 0 1 0 0 0 1 0 0 -1
+</DataItem>
+      </Geometry>
+      <Attribute Name="NodeScalar" AttributeType="Scalar" Center="Node">
+        <DataItem Dimensions="5" NumberType="Float" Precision="8" Format="XML">
+0 0 0 100 100
+</DataItem>
+      </Attribute>
+      <Attribute Name="CellScalar" AttributeType="Scalar" Center="Cell">
+        <DataItem Dimensions="2" NumberType="Float" Precision="8" Format="XML">
+100 200
+</DataItem>
+      </Attribute>
+      <Attribute Name="CellTensor6" AttributeType="Tensor6" Center="Cell">
+        <DataItem Dimensions="12" NumberType="Float" Precision="8" Format="XML">
+100 101 102 103 104 105 200 201 202 203 204 205
+</DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

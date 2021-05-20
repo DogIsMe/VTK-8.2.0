@@ -1,0 +1,30 @@
+<Xdmf xmlns:xi="http://www.w3.org/2003/XInclude" Version="2.1">
+  <Domain>
+    <Grid Name="3DCoRectMesh" GridType="Uniform">
+      <Topology TopologyType="3DCoRectMesh" Dimensions="2 2 3">
+      </Topology>
+      <Geometry Type="ORIGIN_DXDYDZ">
+         <!-- Origin -->
+         <DataItem Format="XML" Dimensions="3" NumberType="Float">
+0.0 0.0 3.0
+         </DataItem>
+         <!-- DxDyDz -->
+        <DataItem Format="XML" Dimensions="3" NumberType="Float">
+1.0 1.5 2.0
+        </DataItem>
+      </Geometry>
+      <Attribute Name="NodeScalars" Center="Node" AttributeType="Scalar">
+        <DataItem Format="XML" Dimensions="2 2 3" NumberType="Int">
+100 200 300 400
+500 600 700 800
+900 1000 1100 1200
+        </DataItem>
+      </Attribute>
+      <Attribute Name="CellScalars" Center="Cell" AttributeType="Scalar">
+        <DataItem Format="XML" Dimensions="2 1 1" NumberType="Int">
+100 200
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

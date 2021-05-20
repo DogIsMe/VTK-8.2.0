@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Xdmf xmlns:xi="http://www.w3.org/2001/XInclude" Version="2.1">
+<Domain>
+  <Graph Name="foo" NumberColumns="3" NumberRows="3">
+    <DataItem DataType="UInt" Dimensions="4" Format="XML" Precision="4">0 0 2 3</DataItem>
+    <DataItem DataType="UInt" Dimensions="3" Format="XML" Precision="4">1 2 0</DataItem>
+    <DataItem DataType="Float" Dimensions="3" Format="XML" Precision="8">5 6 -1</DataItem>
+    <Attribute Center="Node" Name="Node Weight" Type="Scalar">
+      <DataItem DataType="Float" Dimensions="3" Format="XML" Precision="8">0.1 1.2 2.3</DataItem>
+    </Attribute>
+  </Graph>
+</Domain>
+</Xdmf>
