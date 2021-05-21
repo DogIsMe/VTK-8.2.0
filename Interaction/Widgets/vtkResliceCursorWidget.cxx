@@ -28,12 +28,19 @@
 #include "vtkImageData.h"
 #include "vtkInteractorStyleImage.h"
 #include "vtkImageMapToWindowLevelColors.h"
+#include <time.h>
+
+
 
 vtkStandardNewMacro(vtkResliceCursorWidget);
 
 //----------------------------------------------------------------------------
 vtkResliceCursorWidget::vtkResliceCursorWidget()
 {
+  this->Fun = nullptr;
+  this->TimeInterval = 100;
+  this->StartInterval = clock();
+
   this->UseCrossMove = false;
   this->IsRotateAction = false;
   // Set the initial state
@@ -49,6 +56,10 @@ vtkResliceCursorWidget::vtkResliceCursorWidget()
 //----------------------------------------------------------------------------
 vtkResliceCursorWidget::~vtkResliceCursorWidget() = default;
 
+void vtkResliceCursorWidget::SetFun(std::function<void(void)> f)
+{
+   this->Fun = f;
+}
 //----------------------------------------------------------------------
 void vtkResliceCursorWidget::AddEvents()
 {
@@ -182,6 +193,25 @@ void vtkResliceCursorWidget::EndResizeThicknessAction(vtkAbstractWidget *)
 void vtkResliceCursorWidget::SelectAction(vtkAbstractWidget *w)
 {
   vtkResliceCursorWidget *self = reinterpret_cast<vtkResliceCursorWidget*>(w);
+  if (self->Fun)
+  {
+  clock_t t = clock();
+#ifdef __linux__
+  if (t - self->StartInterval < self->TimeInterval *1000)
+  {
+      slef->fun();
+  }
+#elif _WIN32
+  if (t - self->StartInterval < self->TimeInterval)
+  {
+      self->Fun();
+  }
+ 
+#else
+#endif
+  self->StartInterval = t;
+
+  }
   if (self->UseCrossMove)
   {
       int interactionState = self->WidgetRep->GetInteractionState();

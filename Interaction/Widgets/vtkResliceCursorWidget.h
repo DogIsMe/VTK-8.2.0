@@ -38,6 +38,7 @@
 
 #include "vtkInteractionWidgetsModule.h" // For export macro
 #include "vtkAbstractWidget.h"
+#include <functional>
 
 class vtkResliceCursorRepresentation;
 
@@ -116,6 +117,13 @@ public:
   vtkSetMacro(UseCrossMove, vtkTypeBool);
   vtkGetMacro(UseCrossMove, vtkTypeBool);
   vtkBooleanMacro(UseCrossMove, vtkTypeBool);
+  /// <summary>
+  /// 
+  /// </summary>
+  /// <param name=""></param>
+  /// <param name=""></param>
+  vtkSetMacro(TimeInterval, vtkIdType);
+  vtkGetMacro(TimeInterval, vtkIdType);
 /// <summary>
 /// add ClearEvents 
 /// </summary>
@@ -125,6 +133,8 @@ public:
 /// add AddEvents
 /// </summary>
   virtual void AddEvents();
+
+  virtual void SetFun(std::function<void(void)>);
 protected:
   vtkResliceCursorWidget();
   ~vtkResliceCursorWidget() override;
@@ -166,6 +176,12 @@ protected:
   /// add IsRotateAction
   /// </summary>
   vtkTypeBool IsRotateAction;
+/// <summary>
+///  this is set time interval ;ms;
+/// </summary>
+  vtkIdType TimeInterval;
+  vtkIdType StartInterval;
+  std::function<void(void)> Fun;
 private:
   vtkResliceCursorWidget(const vtkResliceCursorWidget&) = delete;
   void operator=(const vtkResliceCursorWidget&) = delete;
