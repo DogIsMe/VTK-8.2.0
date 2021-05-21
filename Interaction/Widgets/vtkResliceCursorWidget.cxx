@@ -56,7 +56,7 @@ vtkResliceCursorWidget::vtkResliceCursorWidget()
 //----------------------------------------------------------------------------
 vtkResliceCursorWidget::~vtkResliceCursorWidget() = default;
 
-void vtkResliceCursorWidget::SetFun(std::function<void(void)> f)
+void vtkResliceCursorWidget::SetFun(std::function<void(vtkResliceCursorWidget*)> f)
 {
    this->Fun = f;
 }
@@ -204,7 +204,7 @@ void vtkResliceCursorWidget::SelectAction(vtkAbstractWidget *w)
 #elif _WIN32
   if (t - self->StartInterval < self->TimeInterval)
   {
-      self->Fun();
+      self->Fun(self);
   }
  
 #else

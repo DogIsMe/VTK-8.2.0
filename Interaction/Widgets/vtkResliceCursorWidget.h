@@ -134,7 +134,7 @@ public:
 /// </summary>
   virtual void AddEvents();
 
-  virtual void SetFun(std::function<void(void)>);
+  virtual void SetFun(std::function<void(vtkResliceCursorWidget*)>);
 protected:
   vtkResliceCursorWidget();
   ~vtkResliceCursorWidget() override;
@@ -181,7 +181,7 @@ protected:
 /// </summary>
   vtkIdType TimeInterval;
   vtkIdType StartInterval;
-  std::function<void(void)> Fun;
+  std::function<void(vtkResliceCursorWidget*)> Fun;
 private:
   vtkResliceCursorWidget(const vtkResliceCursorWidget&) = delete;
   void operator=(const vtkResliceCursorWidget&) = delete;
