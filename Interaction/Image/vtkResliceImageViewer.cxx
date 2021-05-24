@@ -408,35 +408,6 @@ void vtkResliceImageViewer::UpdatePointPlacer()
 }
 
 //----------------------------------------------------------------------------
-void vtkResliceImageViewer::SetInteractorStyle(vtkInteractorStyleImage* style)
-{
-    if (this->InteractorStyle != style)
-    {
-        vtkInteractorStyleImage* temp = this->InteractorStyle;
-        this->InteractorStyle = style;
-        vtkResliceImageViewerScrollCallback* cbk = vtkResliceImageViewerScrollCallback::New();
-        cbk->Viewer = this;
-        this->InteractorStyle->AddObserver(
-            vtkCommand::WindowLevelEvent, cbk);
-        this->InteractorStyle->AddObserver(
-            vtkCommand::StartWindowLevelEvent, cbk);
-        this->InteractorStyle->AddObserver(
-            vtkCommand::ResetWindowLevelEvent, cbk);
-        cbk->Delete();
-        if (temp != nullptr)
-        {
-            temp->RemoveAllObservers();
-            temp->SetInteractor(nullptr);
-            temp->UnRegister(this);
-        }
-        if (this->InteractorStyle != nullptr)
-        {
-            this->InteractorStyle->Register(this);
-        }
-    }
-}
-
-//----------------------------------------------------------------------------
 void vtkResliceImageViewer::Render()
 {
   if (!this->WindowLevel->GetInput())
@@ -628,6 +599,7 @@ void vtkResliceImageViewer::IncrementSlice( int inc )
       }
     }
   }
+  this->Render();
 }
 
 //----------------------------------------------------------------------------

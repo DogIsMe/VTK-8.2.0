@@ -53,10 +53,7 @@ public:
   vtkTypeMacro(vtkResliceImageViewer,vtkImageViewer2);
   void PrintSelf(ostream& os, vtkIndent indent) override;
   //@}
-    /**
-   * add fun.
-   */
-  void SetInteractorStyle(vtkInteractorStyleImage*);
+
   /**
    * Render the resulting image.
    */

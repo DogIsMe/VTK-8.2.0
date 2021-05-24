@@ -30,8 +30,6 @@
 #include "vtkImageMapToWindowLevelColors.h"
 #include <time.h>
 
-
-
 vtkStandardNewMacro(vtkResliceCursorWidget);
 
 //----------------------------------------------------------------------------
@@ -200,17 +198,19 @@ void vtkResliceCursorWidget::SelectAction(vtkAbstractWidget *w)
   if (t - self->StartInterval < self->TimeInterval *1000)
   {
       slef->fun();
+      self->StartInterval = t;
+      return;
   }
 #elif _WIN32
   if (t - self->StartInterval < self->TimeInterval)
   {
       self->Fun(self);
+      self->StartInterval = t;
+      return;
   }
  
 #else
 #endif
-  self->StartInterval = t;
-
   }
   if (self->UseCrossMove)
   {

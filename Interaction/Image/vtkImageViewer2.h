@@ -85,6 +85,10 @@ public:
   virtual const char *GetWindowName();
 
   /**
+   * add fun.
+   */
+  virtual void SetInteractorStyle(vtkInteractorStyleImage*);
+  /**
    * Render the resulting image.
    */
   virtual void Render(void);

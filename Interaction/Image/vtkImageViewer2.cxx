@@ -639,6 +639,34 @@ void vtkImageViewer2::UnInstallPipeline()
   }
 }
 
+void vtkImageViewer2::SetInteractorStyle(vtkInteractorStyleImage* style)
+{
+    if (this->InteractorStyle != style)
+    {
+        vtkInteractorStyleImage* temp = this->InteractorStyle;
+        this->InteractorStyle = style;
+        vtkImageViewer2Callback* cbk = vtkImageViewer2Callback::New();
+        cbk->IV = this;
+        this->InteractorStyle->AddObserver(
+            vtkCommand::WindowLevelEvent, cbk);
+        this->InteractorStyle->AddObserver(
+            vtkCommand::StartWindowLevelEvent, cbk);
+        this->InteractorStyle->AddObserver(
+            vtkCommand::ResetWindowLevelEvent, cbk);
+        cbk->Delete();
+        if (temp != nullptr)
+        {
+            temp->RemoveAllObservers();
+            temp->SetInteractor(nullptr);
+            temp->UnRegister(this);
+        }
+        if (this->InteractorStyle != nullptr)
+        {
+            this->InteractorStyle->Register(this);
+        }
+    }
+}
+
 //----------------------------------------------------------------------------
 void vtkImageViewer2::Render()
 {
