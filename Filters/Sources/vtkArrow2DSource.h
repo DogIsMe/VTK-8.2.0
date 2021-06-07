@@ -1,18 +1,18 @@
-#ifndef vtkArrow2D_h
-#define vtkArrow2D_h
+#ifndef vtkArrow2DSource_h
+#define vtkArrow2DSource_h
 
 #include "vtkFiltersSourcesModule.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSSOURCES_EXPORT vtkArrow2D : public vtkPolyDataAlgorithm
+class VTKFILTERSSOURCES_EXPORT vtkArrow2DSource : public vtkPolyDataAlgorithm
 {
 public:
     //@{
     /**
      * Standard methods for instantiation, obtaining type and printing instance values.
      */
-    static vtkArrow2D* New();
-    vtkTypeMacro(vtkArrow2D, vtkPolyDataAlgorithm);
+    static vtkArrow2DSource* New();
+    vtkTypeMacro(vtkArrow2DSource, vtkPolyDataAlgorithm);
     void PrintSelf(ostream& os, vtkIndent indent) override;
     //@}
     /**
@@ -39,8 +39,8 @@ public:
     vtkGetMacro(Theta, double);
 
 
-    vtkSetMacro(TipLength, double);
-    vtkGetMacro(TipLength, double);
+    //vtkSetMacro(TipLength, double);
+    //vtkGetMacro(TipLength, double);
 
     //@{
     /**
@@ -53,8 +53,8 @@ public:
     //@}
 
 protected:
-    vtkArrow2D();
-    ~vtkArrow2D() override {}
+    vtkArrow2DSource();
+    ~vtkArrow2DSource() override {}
 
     int RequestData(vtkInformation*, vtkInformationVector**, vtkInformationVector*) override;
     double End[3];
@@ -64,8 +64,8 @@ protected:
     double Theta;
     double TipLength;
 private:
-    vtkArrow2D(const vtkArrow2D&) = delete;
-    void operator=(const vtkArrow2D&) = delete;
+    vtkArrow2DSource(const vtkArrow2DSource&) = delete;
+    void operator=(const vtkArrow2DSource&) = delete;
 };
 
 #endif

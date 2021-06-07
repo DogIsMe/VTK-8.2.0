@@ -1,4 +1,4 @@
-#include "vtkArrow2D.h"
+#include "vtkArrow2DSource.h"
 
 #include "vtkCellArray.h"
 #include "vtkDoubleArray.h"
@@ -11,21 +11,21 @@
 #include "vtkObjectFactory.h"
 #include "vtkMath.h"
 
-vtkStandardNewMacro(vtkArrow2D);
+vtkStandardNewMacro(vtkArrow2DSource);
 
-vtkArrow2D::vtkArrow2D()
+vtkArrow2DSource::vtkArrow2DSource()
 {
     this->End[0] = 0.0; this->End[1] = 0.0; this->End[2] = 0.0;
     this->Start[0] = 0.0; this->Start[1] = -10.0; this->Start[2] = 0.0;
     this->Normal[0] = 0.0; this->Normal[1] = 0.0; this->Normal[2] = 1.0;
     this->Theta = vtkMath::Pi() / 8;
-    this->TipLength = 0.5;
+    this->TipLength = 1;
     this->OutputPointsPrecision = SINGLE_PRECISION;
 
     this->SetNumberOfInputPorts(0);
 }
 
-int vtkArrow2D::RequestData(
+int vtkArrow2DSource::RequestData(
     vtkInformation* vtkNotUsed(request),
     vtkInformationVector** vtkNotUsed(inputVector),
     vtkInformationVector* outputVector)
@@ -111,7 +111,7 @@ int vtkArrow2D::RequestData(
         vtkMath::Normalize(px);
     }
     vtkMath::Cross(px, n, py); //created two orthogonal axes in the polygon plane, px & py
-
+    this->TipLength = sqrt(vtkMath::Distance2BetweenPoints(this->Start, this->End))/10.0;
     // Now run around normal vector to produce polygon points.
     double theta = vtkMath::Pi() * (1-this->Theta);
    
@@ -136,7 +136,7 @@ int vtkArrow2D::RequestData(
     return 1;
 }
 
-void vtkArrow2D::PrintSelf(ostream& os, vtkIndent indent)
+void vtkArrow2DSource::PrintSelf(ostream& os, vtkIndent indent)
 {
     this->Superclass::PrintSelf(os, indent);
 

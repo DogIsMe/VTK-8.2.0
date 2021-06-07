@@ -1,7 +1,7 @@
 set(Module_SRCS
   vtkArcSource.cxx
   vtkArrowSource.cxx
-  vtkArrow2D.cxx
+  vtkArrow2DSource.cxx
   vtkButtonSource.cxx
   vtkCellTypeSource.cxx
   vtkConeSource.cxx

@@ -191,6 +191,7 @@ void vtkResliceCursorWidget::EndResizeThicknessAction(vtkAbstractWidget *)
 void vtkResliceCursorWidget::SelectAction(vtkAbstractWidget *w)
 {
   vtkResliceCursorWidget *self = reinterpret_cast<vtkResliceCursorWidget*>(w);
+
   if (self->Fun)
   {
   clock_t t = clock();
@@ -198,17 +199,16 @@ void vtkResliceCursorWidget::SelectAction(vtkAbstractWidget *w)
   if (t - self->StartInterval < self->TimeInterval *1000)
   {
       slef->fun();
-      self->StartInterval = t;
       return;
   }
+  self->StartInterval = t;
 #elif _WIN32
   if (t - self->StartInterval < self->TimeInterval)
   {
       self->Fun(self);
-      self->StartInterval = t;
       return;
   }
- 
+  self->StartInterval = t;
 #else
 #endif
   }

@@ -82,6 +82,7 @@ public:
 //----------------------------------------------------------------------------
 vtkResliceImageViewer::vtkResliceImageViewer()
 {
+    this->CallbackFun = nullptr;
   // Default is to not use the reslice cursor widget, ie use fast
   // 3D texture mapping to display slices.
   this->ResliceMode = vtkResliceImageViewer::RESLICE_AXIS_ALIGNED;
@@ -600,6 +601,10 @@ void vtkResliceImageViewer::IncrementSlice( int inc )
     }
   }
   this->Render();
+  if (this->CallbackFun)
+  {
+      this->CallbackFun(this);
+  }
 }
 
 //----------------------------------------------------------------------------

@@ -32,6 +32,7 @@
 
 #include "vtkInteractionImageModule.h" // For export macro
 #include "vtkImageViewer2.h"
+#include <functional>
 
 class vtkResliceCursorWidget;
 class vtkResliceCursor;
@@ -167,9 +168,13 @@ public:
    */
   virtual void IncrementSlice( int n );
 
+  virtual void SetCallbackFun(std::function<void(vtkResliceImageViewer*)> f) { this->CallbackFun = f; };
+  virtual std::function<void(vtkResliceImageViewer*)> SetCallbackFun() { return this->CallbackFun; };
+
   enum { SliceChangedEvent = 1001 };
 
 protected:
+   std::function<void(vtkResliceImageViewer*)> CallbackFun;
   vtkResliceImageViewer();
   ~vtkResliceImageViewer() override;
 
