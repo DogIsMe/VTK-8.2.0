@@ -111,7 +111,7 @@ int vtkArrow2DSource::RequestData(
         vtkMath::Normalize(px);
     }
     vtkMath::Cross(px, n, py); //created two orthogonal axes in the polygon plane, px & py
-    this->TipLength = sqrt(vtkMath::Distance2BetweenPoints(this->Start, this->End))/10.0;
+    this->TipLength = sqrt(vtkMath::Distance2BetweenPoints(this->Start, this->End));
     // Now run around normal vector to produce polygon points.
     double theta = vtkMath::Pi() * (1-this->Theta);
    
@@ -129,7 +129,14 @@ int vtkArrow2DSource::RequestData(
             x[i] = this->End[i] + this->TipLength * r[i];
         }
         newPoints->InsertNextPoint(x);
-        newPoints->InsertNextPoint(this->Start);
+        theta = vtkMath::Pi();
+        for (int i = 0; i < 3; i++)
+        {
+            r[i] = px[i] * cos(theta) + py[i] * sin(theta);
+            x[i] = this->End[i] + this->TipLength * r[i];
+        }
+        newPoints->InsertNextPoint(x);
+        //newPoints->InsertNextPoint(this->Start);
     output->SetPoints(newPoints);
     newPoints->Delete();
 
