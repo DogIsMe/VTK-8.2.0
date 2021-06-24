@@ -330,8 +330,8 @@ void vtkImageViewer2::UpdateOrientation()
 
       case vtkImageViewer2::SLICE_ORIENTATION_YZ:
         cam->SetFocalPoint(0,0,0);
-        cam->SetPosition(-1,0,0); // -1 if medical ?///< is medical
-        cam->SetViewUp(0,0,1);
+        cam->SetPosition(1,0,0); // -1 if medical ?
+        cam->SetViewUp(0,0,-1);// -1 if medical ?///<is medical
         break;
     }
   }
