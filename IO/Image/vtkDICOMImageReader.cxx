@@ -205,7 +205,8 @@ void vtkDICOMImageReader::ExecuteInformation()
 
     std::vector<std::pair<float, std::string> > sortedFiles;
 
-    this->AppHelper->GetImagePositionPatientFilenamePairs(sortedFiles, false);
+    //this->AppHelper->GetImagePositionPatientFilenamePairs(sortedFiles, false);
+    this->AppHelper->GetImagePositionPatientFilenamePairs(sortedFiles, true);
     this->SetupOutputInformation(static_cast<int>(sortedFiles.size()));
 
     //this->AppHelper->OutputSeries();

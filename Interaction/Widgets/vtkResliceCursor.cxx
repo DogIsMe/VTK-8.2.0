@@ -93,9 +93,13 @@ vtkResliceCursor::vtkResliceCursor()
 
   }
 
-  this->ReslicePlanes->GetItem(0)->SetNormal(1,0,0);
-  this->ReslicePlanes->GetItem(1)->SetNormal(0,-1,0);
-  this->ReslicePlanes->GetItem(2)->SetNormal(0,0,1);
+  //this->ReslicePlanes->GetItem(0)->SetNormal(1,0,0);
+  //this->ReslicePlanes->GetItem(1)->SetNormal(0,-1,0);
+  //this->ReslicePlanes->GetItem(2)->SetNormal(0,0,1);
+  ///<Medical software needs 
+  this->ReslicePlanes->GetItem(0)->SetNormal(-1, 0, 0);
+  this->ReslicePlanes->GetItem(1)->SetNormal(0, -1, 0);
+  this->ReslicePlanes->GetItem(2)->SetNormal(0, 0, 1);
 
   this->BuildCursorTopology();
 }
@@ -196,9 +200,13 @@ void vtkResliceCursor::Reset()
     this->GetPlane(i)->SetOrigin(this->Center);
   }
 
-  this->ReslicePlanes->GetItem(0)->SetNormal(1,0,0);
-  this->ReslicePlanes->GetItem(1)->SetNormal(0,-1,0);
-  this->ReslicePlanes->GetItem(2)->SetNormal(0,0,1);
+  //this->ReslicePlanes->GetItem(0)->SetNormal(1,0,0);
+  //this->ReslicePlanes->GetItem(1)->SetNormal(0,-1,0);
+  //this->ReslicePlanes->GetItem(2)->SetNormal(0,0,1);
+  ///<Medical software needs 
+  this->ReslicePlanes->GetItem(0)->SetNormal(-1, 0, 0);
+  this->ReslicePlanes->GetItem(1)->SetNormal(0, -1, 0);
+  this->ReslicePlanes->GetItem(2)->SetNormal(0, 0, 1);
 
   this->BuildCursorTopology();
   this->BuildCursorGeometry();
